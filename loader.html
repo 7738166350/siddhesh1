@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="loader.css" rel="stylesheet">
+<style>
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body onload="myFunction()" style="margin:0;">
+
+<!-- <div class="spinner"></div> -->
+
+<!-- <div style="display:none;" id="myDiv" class="animate-bottom">
+  <h2>Tada!</h2>
+  <p>Some text in my newly loaded page..</p>
+</div> -->
+
+<!-- Preloader -->
+<div id="preloader">
+  <div id="status">&nbsp;</div>
+</div>
+
+<img width="100%" src='https://unsplash.it/3000/3000/?random' />
+
+<script>
+$(window).on('load', function() { // makes sure the whole site is loaded 
+  $('#status').fadeOut(); // will first fade out the loading animation 
+  $('#preloader').delay(850).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+  $('body').delay(850).css({'overflow':'visible'});
+})
+</script>
+</body>
+</html>
